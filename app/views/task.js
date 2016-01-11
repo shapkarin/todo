@@ -61,7 +61,7 @@ define(['jquery', 'underscore', 'backbone',
               var text = $(this).text();
               $title.attr('contentEditable', 'false');
               // поменяем атрибут модели
-              self.model.set('name', text);
+              self.model.set('title', text);
               //сохраняем на сервер
               //self.model.save();
             }
