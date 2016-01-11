@@ -1,5 +1,4 @@
 define(['jquery'], function($) {
-
   // переводим курсор в конец заголовка при редактировании
   var placeCaretAtEnd = function($el){
     $el[0].focus();
