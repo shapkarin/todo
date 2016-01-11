@@ -10,6 +10,7 @@ define(['jquery',
       url: '',
 
       defaults: {
+        // * Add a task with title
         "title": '',
         "completed": false,
         "created_at": new Date()

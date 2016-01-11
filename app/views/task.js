@@ -17,14 +17,16 @@ define(['jquery', 'underscore', 'backbone',
         template: '',
 
         events: {
-          'click .edit': 'edit',
-          'click .delete': 'delete',
-          'click .complete': 'complete'
+          'click .edit': 'edit', // * Edit a task
+          'click .delete': 'delete', // * Remove a task
+          'click .complete': 'complete' // * Mark a task as completed
+          //todo: * Add a task with title
         },
 
         initialize: function(options) {
 
           this.template = options.template;
+          //вызывает перерисовку по событиям destroy и change
           this.listenTo(this.model, 'destroy', this.remove);
           this.listenTo(this.model, 'change', this.render);
           this.render();
@@ -43,8 +45,7 @@ define(['jquery', 'underscore', 'backbone',
         edit: function(event) {
 
           // найдем заголовок проекта
-          var self = this,
-            $title = $(event.currentTarget);
+          var $title = $(event.currentTarget);
 
           // переделаем его в поле ввода
           $title.attr('contentEditable', 'true');
@@ -59,7 +60,8 @@ define(['jquery', 'underscore', 'backbone',
               var text = $(this).text();
               $title.attr('contentEditable', 'false');
               // поменяем атрибут модели
-              //self.model.set('name', text);
+              self.model.set('name', text);
+              //сохраняем на сервер
               //self.model.save();
             }
           });
