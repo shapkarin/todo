@@ -1,8 +1,8 @@
-define(['views/task', 'text!../templates/task.tp'], function(TaskView, temp) {
+define(['views/task', 'text!../templates/task.tp'], function(TaskView, taskTp) {
 
   var View = Backbone.View.extend({
     el: $('#application'),
-    template: temp,
+    template: taskTp,
 
     initialize: function() {
       var self = this;
@@ -14,7 +14,6 @@ define(['views/task', 'text!../templates/task.tp'], function(TaskView, temp) {
 
     render: function() {
       console.log('Run render collection');
-      // сохраняем шаблон
       var temp = this.template;
       // очищаем содержимое представления
       this.$el.empty();

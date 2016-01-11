@@ -63,7 +63,7 @@ define(['jquery',
               var text = $(this).text();
               $title.attr('contentEditable', 'false');
               // поменяем атрибут модели
-              self.model.set('name', text);
+              //self.model.set('name', text);
               //self.model.save();
             }
           });

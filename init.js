@@ -1,5 +1,5 @@
 requirejs.config({
-  baseUrl: '/app/',
+  baseUrl: '/todo/app/',
   paths: {
     text: 'lib/require/plugins/text',
     jquery: 'lib/jquery-1.8.3',
