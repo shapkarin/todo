@@ -1,20 +1,22 @@
 define(['jquery', 'underscore', 'backbone',
 
         '../modules/placeCaret',
-        '../models/task'
+        '../models/task',
+        'text!../templates/task.tp'
   ],
 
   function( $, _, Backbone,
 
       placeCaretAtEnd,
-      Task
+      Task,
+      taskTp
   ) {
 
       var Task = Backbone.View.extend({
 
         tagName: 'div',
         model: Task,
-        template: '',
+        template: taskTp,
 
         events: {
           'click .edit': 'edit', // * Edit a task
@@ -23,9 +25,8 @@ define(['jquery', 'underscore', 'backbone',
           //todo: * Add a task with title
         },
 
-        initialize: function(options) {
+        initialize: function() {
 
-          this.template = options.template;
           //вызывает перерисовку по событиям destroy и change
           this.listenTo(this.model, 'destroy', this.remove);
           this.listenTo(this.model, 'change', this.render);
