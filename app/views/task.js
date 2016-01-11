@@ -68,10 +68,12 @@ define(['jquery', 'underscore', 'backbone',
         },
 
         delete: function() {
+          //уничтожаем модель
           this.model.destroy();
         },
 
         complete: function(){
+          // меняем атрибут модели на противоположный
           this.model.set('complete', !this.model.get('complete'));
         }
 
