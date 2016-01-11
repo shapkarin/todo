@@ -1,9 +1,6 @@
-define(['jquery',
-        'underscore',
-        'backbone',
+define(['jquery', 'underscore', 'backbone',
 
         '../modules/placeCaret',
-
         '../models/task'
   ],
 
@@ -11,7 +8,6 @@ define(['jquery',
 
       placeCaretAtEnd,
       Task
-
   ) {
 
       var Task = Backbone.View.extend({
@@ -33,7 +29,7 @@ define(['jquery',
           this.listenTo(this.model, 'change', this.render);
           this.render();
 
-          console.log('Item view initialized')
+          //console.log('Item view initialized')
 
         },
 

@@ -16,7 +16,7 @@ define(['jquery',
       },
 
       initialize: function(){
-        console.log('Task model initialized')
+        //console.log('Task model initialized')
       }
 
     });

@@ -5,15 +5,12 @@ define(['views/task', 'text!../templates/task.tp'], function(TaskView, taskTp) {
     template: taskTp,
 
     initialize: function() {
-      var self = this;
       console.log('Collection View is create');
-
-      self.render();
-
+      this.render();
     },
 
     render: function() {
-      console.log('Run render collection');
+      console.log('Run collection rendering...');
       var temp = this.template;
       // очищаем содержимое представления
       this.$el.empty();
