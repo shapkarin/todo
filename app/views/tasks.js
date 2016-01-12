@@ -4,7 +4,7 @@ define(['views/task'], function(TaskView) {
     el: $('#application'),
 
     initialize: function() {
-      console.log('Collection View is create');
+      console.log('Collection View created');
       this.render();
     },
 
