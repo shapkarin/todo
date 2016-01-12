@@ -1,5 +1,5 @@
 <span class="edit"><%= task.title %></span>
 <span class="delete" style="">| delete</span>
 <span class="complete">|
-    <%= task.complete ? 'complete' : 'not complete'%>
+    <%= task.complete ? 'complete' : 'in progress'%>
 </span>
