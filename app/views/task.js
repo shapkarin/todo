@@ -46,7 +46,7 @@ define(['jquery', 'underscore', 'backbone',
         edit: function(event) {
 
           // найдем заголовок проекта
-          var $title = $(event.currentTarget);
+          var self = this, $title = $(event.currentTarget);
 
           // переделаем его в поле ввода
           $title.attr('contentEditable', 'true');
