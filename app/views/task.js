@@ -1,13 +1,9 @@
 define(['jquery', 'underscore', 'backbone',
-
-        '../modules/placeCaret',
         '../models/task',
         'text!../templates/task.tp'
   ],
 
   function( $, _, Backbone,
-
-      placeCaretAtEnd,
       Task,
       taskTp
   ) {
@@ -52,7 +48,7 @@ define(['jquery', 'underscore', 'backbone',
           $title.attr('contentEditable', 'true');
 
           //ставит каретку в конец строки
-          placeCaretAtEnd( $title );
+          // не правильно работает placeCaretAtEnd( $title );
 
           // сохраняем изменения при снятии фокуса или нажатия ENTER
           $title.on('blur keypress', function(event) {
