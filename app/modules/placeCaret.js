@@ -1,5 +1,6 @@
 define(['jquery'], function($) {
   // переводим курсор в конец заголовка при редактировании
+  // TODO: remove that! use Input
   var placeCaretAtEnd = function($el){
     $el[0].focus();
     if (typeof window.getSelection != "undefined"
