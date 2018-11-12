@@ -22,9 +22,10 @@ define(['jquery', 'underscore', 'backbone',
         },
 
         initialize: function() {
-
-          //вызывает перерисовку по событиям destroy и change
+                
+          //вызывает view.remove по событию destroy
           this.listenTo(this.model, 'destroy', this.remove);
+          //вызывает перерисовку по событию change
           this.listenTo(this.model, 'change', this.render);
           this.render();
 
@@ -45,10 +46,8 @@ define(['jquery', 'underscore', 'backbone',
           var self = this, $title = $(event.currentTarget);
 
           // переделаем его в поле ввода
+          // TODO: use input
           $title.attr('contentEditable', 'true');
-
-          //ставит каретку в конец строки
-          // не правильно работает placeCaretAtEnd( $title );
 
           // сохраняем изменения при снятии фокуса или нажатия ENTER
           $title.on('blur keypress', function(event) {
